@@ -1,10 +1,14 @@
-<!Doctype html>
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <H1>chal login kar</H1>
-    <bliink>hacker</bliink>
-  </body>
-</html>
+{% extends "layout.html" %}
+
+{% block body %}
+{% if error %}
+<p>Error: {{error}}</p>
+{% endif %}
+ 
+    <form method="post" enctype="multipart/form-data">
+    user: <input type="text" id="user" name="user">
+    pass: <input type="password" id="pass"name="pass">
+      file:<input type="file" id="the_file" name="the_file">
+      <input type="submit" value="Submit">
+    </form>
+{% endblock %}
